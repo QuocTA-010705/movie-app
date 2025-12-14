@@ -1,0 +1,21 @@
+.movie-card{
+    img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    h3{
+        margin: 8px 0px;
+        color: #ffff;
+        font-size: 18px;
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    p{
+        font-size: 14px;
+        color: #ffff;
+        opacity: 0.5;
+    }
+}

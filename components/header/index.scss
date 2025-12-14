@@ -1,0 +1,36 @@
+.header{
+    background-color: rgba(0, 0, 0, .25);;
+    display: flex;
+    padding: 5px 200px;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 100;
+    // positoin fixed sẽ giúp header luôn ở trên cùng khi ta cuộn trang và không chiếm không gian
+    // khoảng cách của hình bên trái phải bằng 0 thì nó sẽ chiếm hết chiều ngang
+    left: 0;
+    right: 0;
+    &__logo{
+        img{
+            height: 50px;
+        }
+        
+
+    }
+    .menuItems{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        .menuItem{
+            color: #ffff;
+            list-style: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .menuItem:hover{
+            color: #da2f68;
+            transition: all 0.3s;
+        }
+    }
+}

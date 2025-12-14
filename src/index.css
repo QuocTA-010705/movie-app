@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* tạo một nền tảng thống nhất để styling các thành phần */
+body{
+  background-color: #04152d;
+  font-family: 'Roboto', sans-serif;
+}
