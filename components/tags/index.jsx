@@ -1,8 +1,8 @@
 import React from 'react'
-
-function Tags() {
+import './index.scss'
+function Tags({children}) {
   return (
-    <div>Tags</div>
+    <div className='tag'>{children}</div>
   )
 }
 

@@ -35,7 +35,7 @@ export default function Carousel({ heading, url}) {
           navigation={true}
           modules={[Navigation]}
           slidesPerView={5}
-          spaceBetween={10}
+          spaceBetween={15}
         >
           {movies.map((movie) => (
             <SwiperSlide>
