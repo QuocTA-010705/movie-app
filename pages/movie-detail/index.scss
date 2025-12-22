@@ -93,6 +93,20 @@
              line-height: 24px;
             }
           }
+        .description{
+          margin-top: 20px;
+          &__status{
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: rgba(255, 255, 255, .1) 1px solid;
+            h4{
+              font-weight: 500;
+              color: #fff;
+            }
+            
+          }
+        }
       }
     }
   }

@@ -23,6 +23,21 @@ function Movie_Detail() {
   useEffect(() => {
     fetchMovie_detail();
   }, [movieId]);
+  const formatRuntime = (minutes) =>{
+    if(!minutes) return "N/A";
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `${hours}h ${mins}m`;
+  }
+  const formatDate = (dateString) => {
+    if(!dateString) return "N/A";
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "2-digit",
+      year: "numeric",
+    });
+  }
   return (
     <div className="container_wrapper">
       <Header />
@@ -74,6 +89,13 @@ function Movie_Detail() {
               <h1>Overview</h1>
               <div className="description">
                 {movie?.overview}
+              </div>
+            </div>
+            <div className="description">
+              <div className="description__status">
+                <h4>Status: <span>{movie?.status}</span></h4>
+                <h4>Release Date: <span>{formatDate(movie?.release_date)}</span></h4>
+                <h4>Runtime: <span>{formatRuntime(movie?.runtime)}</span></h4>
               </div>
             </div>
           </div>
