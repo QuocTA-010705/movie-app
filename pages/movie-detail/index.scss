@@ -1,8 +1,11 @@
 .container_wrapper {
   background-color: rgba(4, 21, 45, 0.9);
+  
   .container {
     height: 100vh;
     padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
     width: 100%;
     .background {
@@ -22,8 +25,7 @@
       z-index: 999;
       display: flex;
       justify-content: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      
       padding: 20px;
       &__left {
         flex: 3.2;
@@ -94,17 +96,42 @@
             }
           }
         .description{
-          margin-top: 20px;
+          margin-top: 15px;
           &__status{
             display: flex;
             gap: 20px;
-            padding: 20px 0;
+            padding: 15px 0;
+            border-bottom: rgba(255, 255, 255, .1) 1px solid;
+            h4{
+              font-weight: 500;
+              color: #fff;
+              span{
+                opacity: 0.5;
+              }
+            }
+            
+          }
+          &__director{
+            padding: 15px 0;
             border-bottom: rgba(255, 255, 255, .1) 1px solid;
             h4{
               font-weight: 500;
               color: #fff;
             }
-            
+            span{
+                opacity: 0.5;
+              }
+          }
+          &__writer{
+            padding: 15px 0;
+            border-bottom: rgba(255, 255, 255, .1) 1px solid;
+            h4{
+              font-weight: 500;
+              color: #fff;
+            }
+            span{
+                opacity: 0.5;
+              }
           }
         }
       }
