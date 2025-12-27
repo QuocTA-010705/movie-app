@@ -26,7 +26,15 @@ export default function Carousel({ heading, url}) {
   useEffect(() => {
     fetchMovies();
   }, []);
-
+  const formatDate = (dateString) => {
+    if(!dateString) return "N/A";
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US",{
+        month: "short",
+        day: "2-digit",
+        year: "numeric"
+    });
+  };
   return (
     <div className="mySwiper">
       <h2>{heading}</h2>
@@ -42,7 +50,7 @@ export default function Carousel({ heading, url}) {
               <Movie_Card 
               img = {`https://image.tmdb.org/t/p/original/${movie.poster_path}.jpg`}
               title={movie.title ? movie.title : movie.name}
-              date={movie.release_date ? movie.release_date : movie.first_air_date}
+              date={formatDate(movie.release_date ? movie.release_date : movie.first_air_date)}
               id={movie.id}
               />
             </SwiperSlide>

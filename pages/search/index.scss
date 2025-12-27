@@ -1,0 +1,22 @@
+.container_wrapper{
+    position: relative;
+    .main_contents{
+        max-width: 1200px;
+        padding: 100px 10px 100px 10px;
+        margin: 0 auto;
+        h1{
+            color: #fff;
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .movies_search{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            .movie-card{
+                width: calc(100% / 5 - 16px);
+            }
+        }
+    }
+}

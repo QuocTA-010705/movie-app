@@ -56,13 +56,14 @@ function Movie_Detail() {
   return (
     <div className="container_wrapper">
       <Header />
-      <div className="container">
-        <div className="background">
+       <div className="background">
           <img
-            src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
             alt=""
           />
         </div>
+      <div className="container">
+       
         <div className="contents">
           <div className="contents__left">
             <img
@@ -133,11 +134,12 @@ function Movie_Detail() {
             </div>
           </div>
         </div>
-        <div className="overlay"></div>
+        
         <div className="top_cast">
         <h1>Top Cast</h1>
       </div>
       </div>
+      <div className="overlay"></div>
     </div>
   );
 }

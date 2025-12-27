@@ -8,4 +8,23 @@ body{
   background-color: #04152d;
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
 }
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;
+}
+
+/* Edge cũ */
+body {
+  -ms-overflow-style: none;
+}
+
